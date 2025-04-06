@@ -64,7 +64,7 @@ function render() {
       <td>${t.categoria}</td>
       <td class="${t.tipo}">${t.tipo}</td>
       <td class="${t.tipo}">R$ ${t.valor.toFixed(2)}</td>
-      <td><button onclick="deletar(${t.id})">Deletar</button></td>
+      <td><button class="btn-delete" onclick="deletar(${t.id})">Deletar</button></td>
     `
     lista.appendChild(tr)
   })
