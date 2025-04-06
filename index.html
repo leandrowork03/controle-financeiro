@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header><h1>💵 Controle Financeiro</h1></header>
+    <div id="relatorio">
+        <form id="form-transacao">
+            <input type="date" id="data" required>
+            <input type="text" id="descricao" placeholder="descrição">
+            <input type="text" id="categoria" placeholder="categoria" required>
+            <select id="tipo">
+                <option value="receita">receita</option>
+                <option value="despesa">despesa</option>
+            </select>
+            <input type="number" id="valor" placeholder="valor" step="0.01" required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <label for="filtro-mes" class="form-label">filtrar por mês</label>
+        <input type="month" id="filtro-mes">
+
+        <div class="div-table">
+        <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="lista-transacoes">
+                
+            </tbody>
+          </table>
+          </div>
+          <div class="resumo">
+            <p>Receitas: R$ <span id="total-receitas">0.00</span></p>
+            <p>Despesas: R$ <span id="total-despesas">0.00</span></p>
+            <p>Saldo: R$ <span id="saldo">0.00</span></p>
+          </div>
+
+          <div class="graficos-container">
+            <canvas id="grafico-pizza"></canvas>
+            <canvas id="grafico-barra"></canvas>
+          </div>
+
+          <button id="exportar-pdf">Exportar Relatório PDF</button>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+          <script src="./js/style.js"></script>
+    </div>
+</body>
+</html>
+

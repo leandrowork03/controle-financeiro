@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(194, 181, 181);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+
+  header{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    background-image: url(../img/mulher-segurando-dinheiro-em-uma-mao-e-apontar-para-o-espaco-vazio-mulher-afro-segurando-dinheiro-brasileiro_309823-836.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #00C374;
+
+  }
+  header h1{
+    color: #ccc;
+    text-shadow: 0 0 5px gray;
+  }
+  #relatorio{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+
+  form, table, .resumo {
+    margin: 20px 0;
+  }
+  
+  input, select, button {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .receita {
+    color: green;
+  }
+  
+  .despesa {
+    color: red;
+  }
+  
+  .graficos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  canvas {
+    flex: 1;
+    max-width: 200px;
+    max-height: 200px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  @media(max-width: 1170px){
+    button, input{
+        margin: 10px;
+    }
+    .div-table{
+        overflow-x: scroll;
+    }
+  }
+  @media(max-width: 680px){
+   header{
+    height: auto;
+    background-image: none;
+   }
+   
+    header h1{
+        font-size: 20px;   
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 500px;
+    }
+      
+      input, select, button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+    select{
+        margin-inline-start: 10px;
+    }
+    .div-table{
+      width: 80%;
+        overflow-x: scroll;
+    }
+    table th, table td {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+      .div-table button{
+        align-items: center;
+        padding: 8px 4px;
+        font-size: 10px; 
+      }
+  }
